@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --passWithNoTests",
+    "test:watch": "npm test -- --watch",
+    "test:staged": "npm test -- --findRelatedTests",
+    "test:ci": "npm test -- --coverage"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/faker": "^4.1.11",
     "@types/jest": "^25.2.1",
     "@types/node": "^13.13.5",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
@@ -19,11 +24,15 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
+    "faker": "^4.1.0",
     "git-commit-msg-linter": "^2.4.2",
     "husky": "^4.2.5",
     "jest": "^25.5.4",
     "lint-staged": "^10.2.2",
     "ts-jest": "^25.5.0",
     "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
   }
 }

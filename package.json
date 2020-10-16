@@ -33,6 +33,7 @@
     "faker": "^4.1.0",
     "git-commit-msg-linter": "^2.4.2",
     "husky": "^4.2.5",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^25.5.4",
     "lint-staged": "^10.2.2",
     "node-sass": "^4.14.1",

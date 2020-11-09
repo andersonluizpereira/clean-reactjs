@@ -41,7 +41,7 @@ describe('Login Component', () => {
     expect(passwordStatus.title).toBe('Campo Obrigatório')
     expect(passwordStatus.textContent).toBe('🔴')
   })
-  test('Should call Validation with correct values', () => {
+  test('Should call Validation with correct email', () => {
     const { sut, validationSpy } = makeSut()
     const emailInput = sut.getByTestId('email')
     fireEvent.input(emailInput, { target: { value: 'any_email' } })

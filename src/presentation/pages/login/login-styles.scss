@@ -29,9 +29,10 @@
       &:disabled {
         background-color: $disabledBackground;
         color: $disabledColor;
-         &:hover {
-           opacity: 1;
-         }
+
+        &:hover {
+          opacity: 1;
+        }
       }
     }
 

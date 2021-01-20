@@ -1,3 +1,9 @@
+[![Build Status](https://travis-ci.org/andersonluizpereira/clean-reactjs.svg?branch=master)](https://travis-ci.org/andersonluizpereira/clean-reactjs)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
+
+
 # **4Dev React - Enquetes para Programadores**
 
 [![alt text](./public/course-logo.png "Link para o treinamento")](https://www.udemy.com/course/react-com-mango/?referralCode=552F88858EAE76346C8B)

@@ -13,8 +13,8 @@ body {
 }
 
 input[type="password"],
-input[type="text"],
-input[type="email"] {
+input[type="email"],
+input[type="text"] {
   border: 1px solid $primaryLight;
   line-height: 40px;
   border-radius: 4px;
@@ -36,7 +36,7 @@ button {
   &:hover {
     opacity: 0.9;
   }
-
+  
   &:disabled {
     background-color: $disabledBackground;
     color: $disabledColor;

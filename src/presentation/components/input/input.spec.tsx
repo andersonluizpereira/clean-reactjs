@@ -1,8 +1,8 @@
 import React from 'react'
-import { fireEvent, render, RenderResult } from '@testing-library/react'
+import faker from 'faker'
+import { render, RenderResult, fireEvent } from '@testing-library/react'
 import Input from './input'
 import Context from '@/presentation/contexts/form/form-context'
-import faker from 'faker'
 
 const makeSut = (fieldName: string): RenderResult => {
   return render(
@@ -20,7 +20,7 @@ describe('Input Component', () => {
     expect(input.readOnly).toBe(true)
   })
 
-  test('Should remove with readOnly on focus', () => {
+  test('Should remove readOnly on focus', () => {
     const field = faker.database.column()
     const sut = makeSut(field)
     const input = sut.getByTestId(field) as HTMLInputElement

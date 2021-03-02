@@ -15,6 +15,7 @@ describe('CompareFieldsValidation', () => {
     })
     expect(error).toEqual(new InvalidFieldError())
   })
+
   test('Should return falsy if compare is valid', () => {
     const field = faker.database.column()
     const fieldToCompare = faker.database.column()

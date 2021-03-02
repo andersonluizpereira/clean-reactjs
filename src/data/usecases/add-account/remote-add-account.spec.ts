@@ -1,11 +1,11 @@
 import { RemoteAddAccount } from './remote-add-account'
 import { HttpPostClientSpy } from '@/data/test'
-import { AddAccountParams } from '@/domain/usecases'
 import { HttpStatusCode } from '@/data/protocols/http'
+import { AddAccountParams } from '@/domain/usecases'
 import { mockAddAccountParams, mockAccountModel } from '@/domain/test'
 import { AccountModel } from '@/domain/models'
-import faker from 'faker'
 import { EmailInUseError, UnexpectedError } from '@/domain/errors'
+import faker from 'faker'
 
 type SutTypes = {
   sut: RemoteAddAccount
@@ -44,6 +44,7 @@ describe('RemoteAddAccount', () => {
     const promise = sut.add(mockAddAccountParams())
     await expect(promise).rejects.toThrow(new EmailInUseError())
   })
+
   test('Should throw UnexpectedError if HttpPostClient returns 400', async () => {
     const { sut, httpPostClientSpy } = makeSut()
     httpPostClientSpy.response = {

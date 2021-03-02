@@ -1,5 +1,4 @@
 import { HttpPostClient, HttpPostParams, HttpResponse, HttpStatusCode } from '@/data/protocols/http'
-
 import faker from 'faker'
 
 export const mockPostRequest = (): HttpPostParams<any> => ({

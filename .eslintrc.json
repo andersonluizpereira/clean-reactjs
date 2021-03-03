@@ -1,14 +1,18 @@
 {
   "settings": {
-    "react":{
+    "react": {
       "version": "detect"
     }
   },
   "extends": [
     "standard-with-typescript",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:cypress/recommended"
   ],
-  "plugins": ["react"],
+  "env": {
+    "cypress/globals": true
+  },
+  "plugins": ["react", "cypress"],
   "parserOptions": {
     "project": "./tsconfig.json"
   },

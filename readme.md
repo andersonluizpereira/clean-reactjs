@@ -1,23 +1,22 @@
-[![Build Status](https://travis-ci.org/andersonluizpereira/clean-reactjs.svg?branch=master)](https://travis-ci.org/andersonluizpereira/clean-reactjs)
-[![Coverage Status](https://coveralls.io/repos/github/andersonluizpereira/clean-reactjs/badge.svg?branch=master)](https://coveralls.io/github/andersonluizpereira/clean-reactjs?branch=master)
+[![Build Status](https://travis-ci.org/rmanguinho/clean-react.svg?branch=master)](https://travis-ci.org/rmanguinho/clean-react)
+[![Coverage Status](https://coveralls.io/repos/github/rmanguinho/clean-react/badge.svg?branch=master)](https://coveralls.io/github/rmanguinho/clean-react?branch=master)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
 
-
 # **4Dev React - Enquetes para Programadores**
 
-[![alt text](./public/course-logo.png "Link para o treinamento")](https://www.udemy.com/course/react-com-mango/?referralCode=552F88858EAE76346C8B)
+[![alt text](./public/img/course-logo.png "Link para o treinamento")](https://www.udemy.com/course/)
 
 ---
 
-## [**Link para o curso completo**](https://www.udemy.com/course/react-com-mango/?referralCode=552F88858EAE76346C8B)
+## [**Link para o curso completo**](https://www.udemy.com/course/)
 
 Essa sistema faz parte do treinamento do professor Rodrigo Manguinho (Mango) na Udemy.
 
 O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando os novos Hooks, com uma arquitetura bem definida e desacoplada, utilizando TDD (programação orientada a testes) como metodologia de trabalho, Clean Architecture para fazer a distribuição de responsabilidades em camadas, sempre seguindo os princípios do SOLID, DRY, YAGNI, KISS e aplicando Design Patterns para resolver alguns problemas comuns.
 
-## [**Link para a documentação da API**](https://clean-node-api-ads.herokuapp.com/api-docs)
+## [**Link para a documentação da API**](http://fordevs.herokuapp.com/api-docs)
 
 > ## Princípios
 
@@ -26,7 +25,6 @@ O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando
 * Liskov Substitution Principle (LSP)
 * Interface Segregation Principle (ISP)
 * Dependency Inversion Principle (DIP)
-* Separation of Concerns (SOC)
 * Don't Repeat Yourself (DRY)
 * You Aren't Gonna Need It (YAGNI)
 * Keep It Simple, Silly (KISS)
@@ -43,7 +41,6 @@ O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando
 * Abstract Server
 * Composition Root
 * Builder
-* Proxy
 
 > ## Metodologias e Designs
 
@@ -51,7 +48,6 @@ O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando
 * Clean Architecture
 * DDD
 * Reactive Programming
-* Responsive Layout
 * Conventional Commits
 * GitFlow
 * Modular Design
@@ -63,38 +59,34 @@ O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando
 
 > ## Bibliotecas e Ferramentas
 
-* Typescript
 * React
-* React Testing Library
-* React Router DOM
-* Cypress
+* Typescript
+* Git
 * Jest
 * Axios
-* Git
 * Webpack
-* SASS + Animations
+* SASS
 * NPM
 * Travis CI
 * Faker
 * Coveralls
+* React Hooks
+* React Router
 * Husky
 * Lint Staged
 * Eslint
 * Standard Javascript Style
-* React Flip Move
 
 > ## Features do React
 
-* Functional Components
+* React Testing Library
+* React Router
 * UseState
 * UseContext
 * UseEffect
 * UseHistory
-* UseRef
-* UseParams
-* Custom Hooks
-* Router
 * Memo
+* Functional Components
 
 > ## Features do Git
 
@@ -120,8 +112,6 @@ O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando
 * POO Avançado
 * Interface
 * Type Alias
-* Namespace
-* Module
 * Utility Types
 * Modularização de Paths
 * Build

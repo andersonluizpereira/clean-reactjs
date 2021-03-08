@@ -35,10 +35,12 @@
   }
 
   &:focus-within {
-    border-color: transparent;  
+    border-color: transparent;
+
     &::after {
       transform: scaleX(1);
-    } 
+    }
+
     label {
       transform: scale(0.9) translateY(-20px);
     }
@@ -48,10 +50,12 @@
     width: 100%;
     line-height: 24px;
     padding: 0px 40px 0px 8px;
+
     &:not(:placeholder-shown) + label {
-      transform: scale(0.9) translateY(-20px); 
+      transform: scale(0.9) translateY(-20px);
     }
   }
+
   label {
     position: absolute;
     left: 8px;
@@ -61,6 +65,7 @@
     transform: translateY(0px);
     transition: transform 400ms ease;
   }
+
   .status {
     position: absolute;
     right: 8px;

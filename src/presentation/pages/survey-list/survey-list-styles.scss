@@ -7,50 +7,6 @@
   min-height: 100vh;
   background-color: $disabledBackground;
 
-  .headerWrap {
-    display: flex;
-    background-color: $primary;
-    border-top: 40px solid $primaryDark;
-    justify-content: center;
-
-    .headerContent {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      max-width: 800px;
-      flex-grow: 1;
-      padding: 24px 40px;
-
-      img {
-        width: 60px;
-        align-self: center;
-      }
-
-      .logoutWrap {
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        align-items: flex-end;
-        justify-content: center;
-        color: $white;
-
-        span {
-          font-size: 16px;
-          margin-bottom: 8px;
-        }
-
-        a {
-          color: $white;
-          text-decoration: none;
-
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
-    }
-  }
-
   .contentWrap {
     display: flex;
     flex-direction: column;
@@ -97,6 +53,13 @@
             linear-gradient(to right, $white, $white);
           background-position: 0 0, 54 0;
           background-size: 54px 100%, 100% 100%;
+          position: relative;
+
+          .iconWrap {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+          }
 
           time {
             display: flex;
@@ -131,6 +94,7 @@
             font-size: 18px;
             margin: 24px;
             align-self: center;
+            flex-grow: 1;
           }
         }
 
@@ -146,6 +110,20 @@
           &:hover {
             background-color: $primaryDark;
           }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .surveyListWrap {
+    .contentWrap {
+      ul {
+        flex-direction: column;
+  
+        li {
+          flex-basis: 100%;
         }
       }
     }

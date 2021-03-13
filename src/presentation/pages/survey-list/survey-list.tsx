@@ -1,24 +1,17 @@
 import React from 'react'
 import Styles from './survey-list-styles.scss'
-import { Logo, Footer } from '@/presentation/components'
+import { Header, Footer, Icon, IconName } from '@/presentation/components'
 
 const SurveyList: React.FC = () => {
   return (
     <div className={Styles.surveyListWrap}>
-      <header className={Styles.headerWrap}>
-        <div className={Styles.headerContent}>
-          <Logo />
-          <div className={Styles.logoutWrap}>
-            <span>Anderson</span>
-            <a href="#">Sair</a>
-          </div>
-        </div>
-      </header>
+      <Header />
       <div className={Styles.contentWrap}>
         <h2>Enquetes</h2>
         <ul>
           <li>
             <div className={Styles.surveyContent}>
+              <Icon className={Styles.iconWrap} iconName={IconName.thumbDown} />
               <time>
                 <span className={Styles.day}>22</span>
                 <span className={Styles.month}>03</span>
@@ -30,39 +23,19 @@ const SurveyList: React.FC = () => {
           </li>
           <li>
             <div className={Styles.surveyContent}>
+              <Icon className={Styles.iconWrap} iconName={IconName.thumbDown} />
               <time>
                 <span className={Styles.day}>22</span>
                 <span className={Styles.month}>03</span>
                 <span className={Styles.year}>2020</span>
               </time>
-              <p>Qual é seu framework web favorito?</p>
+              <p>Qual é seu framework web favorito? Qual é seu framework web favorito? Qual é seu framework web favorito?</p>
             </div>
             <footer>Ver Resultado</footer>
           </li>
           <li>
             <div className={Styles.surveyContent}>
-              <time>
-                <span className={Styles.day}>22</span>
-                <span className={Styles.month}>03</span>
-                <span className={Styles.year}>2020</span>
-              </time>
-              <p>Qual é seu framework web favorito?</p>
-            </div>
-            <footer>Ver Resultado</footer>
-          </li>
-          <li>
-            <div className={Styles.surveyContent}>
-              <time>
-                <span className={Styles.day}>22</span>
-                <span className={Styles.month}>03</span>
-                <span className={Styles.year}>2020</span>
-              </time>
-              <p>Qual é seu framework web favorito?</p>
-            </div>
-            <footer>Ver Resultado</footer>
-          </li>
-          <li>
-            <div className={Styles.surveyContent}>
+              <Icon className={Styles.iconWrap} iconName={IconName.thumbDown} />
               <time>
                 <span className={Styles.day}>22</span>
                 <span className={Styles.month}>03</span>

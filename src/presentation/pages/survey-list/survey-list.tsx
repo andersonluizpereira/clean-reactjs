@@ -9,7 +9,7 @@ const SurveyList: React.FC = () => {
         <div className={Styles.headerContent}>
           <Logo />
           <div className={Styles.logoutWrap}>
-            <span>Rodrigo</span>
+            <span>Anderson</span>
             <a href="#">Sair</a>
           </div>
         </div>

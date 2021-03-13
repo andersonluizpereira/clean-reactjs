@@ -1,10 +1,10 @@
-import { HttpStatusCode } from '@/data/protocols/http'
+import { RemoteLoadSurveyList } from './remote-load-survey-list'
 import { HttpGetClientSpy } from '@/data/test'
+import { HttpStatusCode } from '@/data/protocols/http'
 import { UnexpectedError } from '@/domain/errors'
 import { SurveyModel } from '@/domain/models'
 import { mockSurveyListModel } from '@/domain/test'
 import faker from 'faker'
-import { RemoteLoadSurveyList } from './remote-load-survey-list'
 
 type SutTypes = {
   sut: RemoteLoadSurveyList
@@ -24,15 +24,16 @@ describe('RemoteLoadSurveyList', () => {
   test('Should call HttpGetClient with correct URL', async () => {
     const url = faker.internet.url()
     const { sut, httpGetClientSpy } = makeSut(url)
-    await sut.loadlAll()
+    await sut.loadAll()
     expect(httpGetClientSpy.url).toBe(url)
   })
+
   test('Should throw UnexpectedError if HttpGetClient returns 403', async () => {
     const { sut, httpGetClientSpy } = makeSut()
     httpGetClientSpy.response = {
       statusCode: HttpStatusCode.forbidden
     }
-    const promise = sut.loadlAll()
+    const promise = sut.loadAll()
     await expect(promise).rejects.toThrow(new UnexpectedError())
   })
 
@@ -41,7 +42,7 @@ describe('RemoteLoadSurveyList', () => {
     httpGetClientSpy.response = {
       statusCode: HttpStatusCode.notFound
     }
-    const promise = sut.loadlAll()
+    const promise = sut.loadAll()
     await expect(promise).rejects.toThrow(new UnexpectedError())
   })
 
@@ -50,7 +51,7 @@ describe('RemoteLoadSurveyList', () => {
     httpGetClientSpy.response = {
       statusCode: HttpStatusCode.serverError
     }
-    const promise = sut.loadlAll()
+    const promise = sut.loadAll()
     await expect(promise).rejects.toThrow(new UnexpectedError())
   })
 
@@ -61,7 +62,7 @@ describe('RemoteLoadSurveyList', () => {
       statusCode: HttpStatusCode.ok,
       body: httpResult
     }
-    const surveyList = await sut.loadlAll()
+    const surveyList = await sut.loadAll()
     expect(surveyList).toEqual(httpResult)
   })
 
@@ -70,7 +71,7 @@ describe('RemoteLoadSurveyList', () => {
     httpGetClientSpy.response = {
       statusCode: HttpStatusCode.noContent
     }
-    const surveyList = await sut.loadlAll()
+    const surveyList = await sut.loadAll()
     expect(surveyList).toEqual([])
   })
 })

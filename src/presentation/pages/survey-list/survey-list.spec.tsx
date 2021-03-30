@@ -1,20 +1,8 @@
 import { SurveyList } from '@/presentation/pages'
-import { LoadSurveyList } from '@/domain/usecases'
-import { SurveyModel } from '@/domain/models'
-import { fireEvent, render, screen, waitFor } from '@testing-library/react'
-import React from 'react'
-import { mockSurveyListModel } from '@/domain/test'
+import { LoadSurveyListSpy } from '@/domain/test'
 import { UnexpectedError } from '@/domain/errors'
-
-class LoadSurveyListSpy implements LoadSurveyList {
-  callsCount = 0
-  surveys = mockSurveyListModel()
-
-  async loadAll (): Promise<SurveyModel[]> {
-    this.callsCount++
-    return this.surveys
-  }
-}
+import { render, screen, waitFor, fireEvent } from '@testing-library/react'
+import React from 'react'
 
 type SutTypes = {
   loadSurveyListSpy: LoadSurveyListSpy
@@ -50,7 +38,7 @@ describe('SurveyList Component', () => {
     expect(screen.queryByTestId('error')).not.toBeInTheDocument()
   })
 
-  test('Should render error failure', async () => {
+  test('Should render error on failure', async () => {
     const loadSurveyListSpy = new LoadSurveyListSpy()
     const error = new UnexpectedError()
     jest.spyOn(loadSurveyListSpy, 'loadAll').mockRejectedValueOnce(error)
@@ -67,5 +55,6 @@ describe('SurveyList Component', () => {
     await waitFor(() => screen.getByRole('heading'))
     fireEvent.click(screen.getByTestId('reload'))
     expect(loadSurveyListSpy.callsCount).toBe(1)
+    await waitFor(() => screen.getByRole('heading'))
   })
 })

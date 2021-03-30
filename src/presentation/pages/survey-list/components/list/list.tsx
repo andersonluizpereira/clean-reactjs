@@ -1,7 +1,7 @@
+import Styles from './list-styles.scss'
+import { SurveyItem, SurveyItemEmpty, SurveyContext } from '@/presentation/pages/survey-list/components'
 import { SurveyModel } from '@/domain/models'
 import React, { useContext } from 'react'
-import { SurveyItem, SurveyItemEmpty, SurveyContext } from '@/presentation/pages/survey-list/components'
-import Styles from './list-styles.scss'
 
 const List: React.FC = () => {
   const { state } = useContext(SurveyContext)
@@ -14,4 +14,5 @@ const List: React.FC = () => {
     </ul>
   )
 }
+
 export default List

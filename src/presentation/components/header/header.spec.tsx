@@ -1,11 +1,11 @@
 import { Header } from '@/presentation/components'
 import { ApiContext } from '@/presentation/contexts'
-import { render, screen, fireEvent } from '@testing-library/react'
-import { createMemoryHistory, MemoryHistory } from 'history'
-import { Router } from 'react-router-dom'
-import React from 'react'
 import { AccountModel } from '@/domain/models'
 import { mockAccountModel } from '@/domain/test'
+import { render, fireEvent, screen } from '@testing-library/react'
+import { Router } from 'react-router-dom'
+import { createMemoryHistory, MemoryHistory } from 'history'
+import React from 'react'
 
 type SutTypes = {
   history: MemoryHistory
@@ -27,15 +27,16 @@ const makeSut = (account = mockAccountModel()): SutTypes => {
     setCurrentAccountMock
   }
 }
-describe('Header', () => {
-  test('should call setCurrentAccountMock with null', () => {
+
+describe('Header Component', () => {
+  test('Should call setCurrentAccount with null', () => {
     const { history, setCurrentAccountMock } = makeSut()
     fireEvent.click(screen.getByTestId('logout'))
     expect(setCurrentAccountMock).toHaveBeenCalledWith(undefined)
     expect(history.location.pathname).toBe('/login')
   })
 
-  test('should render username correctly', () => {
+  test('Should render username correctly', () => {
     const account = mockAccountModel()
     makeSut(account)
     expect(screen.getByTestId('username')).toHaveTextContent(account.name)
